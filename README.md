@@ -27,12 +27,11 @@ Or even better, create your own language file from one of the existing one and s
  <script type="text/javascript" src="bootstrap-form-validator.min.js"></script>
 ```
 2. In your form tag, add the one of the following instruction to enable the validation :
-    1. **real time validation**
+  a. **real time validation**
 ```html
 <form data-validate="live">
 ```
-    2. 
-  **validation on submit**
+  b. **validation on submit**
 ```html
 <form data-validate="true">
 ```
@@ -41,8 +40,8 @@ Or even better, create your own language file from one of the existing one and s
 ```html
 <input type="email" class="form-control" id="email" placeholder="Email" data-validate="required,email">
 ```
-This will tell the validator to make sure the field is not empty(**required**) and to make sure the value is a valid 
-email address(**email**).
+This will tell the validator to make sure the field is not empty( **required** ) and to make sure the value is a valid 
+email address( **email** ). Each parameter
 
 > You can use as many rules as you want.
 
@@ -59,3 +58,21 @@ email address(**email**).
 ```html
 <input type="text" class="form-control" id="cc" placeholder="Credit card" data-validate="required,creditcard">
 ```
+
+## Rules
+
+|rule name|optional parameter|description|
+|---------|------------------|-----------|
+|alpha |none |Input value must contain only letters |
+|alphanumeric |none |Input value must contain letters or numbers |
+|creditcard |none |Input value must be in a credit card format |
+|email|none|Input value must be an email address|
+|interger |none |Input value must be an integer |
+|matches|Other input field Id|Input value must be the same as the one specified in the other field|
+|maxlength|Number|Input value must be at maximum the number of characters specified with the parameter|
+|minlength|Number|Input value must be at least the number of characters specified with the parameter|
+|number |none |Input value must be a number |
+|required|none|Input value must not be empty|
+|tel |none |Input value must contain numbers and can contain seperators like dot(.), dash(-) or space |
+|tel_us |none |Input value must be in the North America phone number format  |
+|url |none |Input value must be an url |
