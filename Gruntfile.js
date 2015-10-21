@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
         // Minify definitions
         uglify: {
-            my_target: {
+            target: {
                 src: ["dist/<%= pkg.name %>.js"],
                 dest: "dist/<%= pkg.name %>.min.js"
             },
