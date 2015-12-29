@@ -1,10 +1,10 @@
 {
   "name": "bootstrap-form-validator",
-  "version": "0.0.2",
-  "description": "A javascript bootstrap plugin to validate a form",
+  "version": "0.0.3",
+  "description": "A javascript bootstrap plugin to validate form",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alex-michaud/bootstrap-form-validator.git"
+    "url": "https://github.com/alex-michaud/bootstrap-form-validator"
   },
   "author": {
     "name": "Alex Michaud",

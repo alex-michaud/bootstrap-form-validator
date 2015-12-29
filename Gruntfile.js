@@ -7,13 +7,15 @@ module.exports = function(grunt) {
 
         // Banner definitions
         meta: {
-            banner: "/*\n" +
-            " *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n" +
-            " *  <%= pkg.description %>\n" +
-            " *\n" +
-            " *  Made by <%= pkg.author.name %>\n" +
-            " *  Under <%= pkg.license %> License\n" +
-            " */\n"
+            banner: '/*!\n' +
+            ' *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
+            ' *  <%= pkg.description %>\n' +
+            ' *\n' +
+            ' *  Made by <%= pkg.author.name %> - <%= pkg.author.url %>\n' +
+            ' *  Copyright <%= grunt.template.today("yyyy") %>\n' +
+            ' *  Under <%= pkg.license %> License\n' +
+            ' *  Repository <%= pkg.repository.url %>\n' +
+            ' */\n'
         },
 
         // Concat definitions
