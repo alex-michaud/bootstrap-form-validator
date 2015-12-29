@@ -1,5 +1,5 @@
 /*!
- *  bootstrap-form-validator - v0.0.3
+ *  bootstrap-form-validator - v0.0.4
  *  A javascript bootstrap plugin to validate form
  *
  *  Made by Alex Michaud - https://github.com/alex-michaud
@@ -172,12 +172,6 @@ if ( ! window.console ) {
 
 			var value = $inputElement.val();
 
-			//if(ruleName == 'required') {
-			//	console.log(value)
-			//	console.log($inputElement.is('input[type="checkbox"]'))
-			//	console.log($inputElement[0].checked)
-			//}
-		    
             if(ruleName == 'required') {
 				if($inputElement.is('input[type="checkbox"]'))
 					return $inputElement[0].checked;
@@ -243,9 +237,6 @@ if ( ! window.console ) {
          */
 		, validateInput : function($inputElement) {
 
-			//if(!$inputElement.jquery)
-			//	$inputElement = $($inputElement);
-
 		    // if : element is disabled, don't do validation
             if($inputElement.is(':disabled'))
                 return true;
@@ -278,7 +269,7 @@ if ( ! window.console ) {
 					$inputElement.tooltip({
 						html:true,
 						placement: $inputElement.data('placement') ? $inputElement.data('placement') : this.options.placement,
-						container:$inputElement.data('container') ? $inputElement.data('container') : this.options.container,//'body',
+						container:$inputElement.data('container') ? $inputElement.data('container') : this.options.container,
 						title:this.formatErrors(errorArray),
 						trigger:'manual'
 					});
@@ -401,6 +392,10 @@ if ( ! window.console ) {
     	            $form.submit();
         	    }
 			});
+
+			$form.find('[type="submit"]').on('click', function(e){
+				$form.submit();
+			});
 			
 			// if the live option is enabled, activate validation on key up
 			if($form.data('validate')=='live') {
@@ -436,17 +431,10 @@ if ( ! window.console ) {
 			
 			$form.on('submit.validator.data-api', function(e) {
                 $form.validator('validateForm');
-                // console.log('--submit--')
+                 //console.log('--submit--')
                 if($form.data('validator').validationStatus==false)
                     e.preventDefault();
             });
-            
-            // if form already have error(s) on load, display those errors 
-            // if($form.find('.has-error').length)
-            // {
-                // var callback = function(){ $form.validator('validateForm'); };
-                // $form.validator('delay', callback, 300);
-            // }
 		});
 		
 	});

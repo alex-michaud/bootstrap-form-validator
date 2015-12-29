@@ -1,5 +1,5 @@
 /*!
- *  bootstrap-form-validator - v0.0.3
+ *  bootstrap-form-validator - v0.0.4
  *  A javascript bootstrap plugin to validate form
  *
  *  Made by Alex Michaud - https://github.com/alex-michaud
